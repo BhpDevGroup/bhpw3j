@@ -1,0 +1,8 @@
+rootProject.name = 'bhpw3j'
+
+include 'contract'
+include 'core'
+include 'crypto'
+include 'model'
+include 'utils'
+include 'wallet'

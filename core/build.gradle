@@ -1,0 +1,25 @@
+description 'bhpw3j is a Java library to interact with the BHP blockchain'
+
+dependencies {
+    compile project(':model'),
+            project(':crypto'),
+            project(':utils'),
+            "com.github.jnr:jnr-unixsocket:$jnr_unixsocketVersion",
+            "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+            "io.reactivex:rxjava:$rxjavaVersion",
+            "org.java-websocket:Java-WebSocket:$javaWebSocketVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "org.slf4j:slf4j-api:$slf4jVersion"
+    testCompile "nl.jqno.equalsverifier:equalsverifier:$equalsverifierVersion",
+            "ch.qos.logback:logback-classic:$logbackVersion"
+    integrationTestCompile "org.awaitility:awaitility:$awaitility"
+}
+
+configurations {
+    testArtifacts.extendsFrom testRuntime
+}
+
+artifacts {
+    testArtifacts testJar
+}

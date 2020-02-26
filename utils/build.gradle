@@ -1,0 +1,6 @@
+description 'bhpw3j set of utils'
+
+dependencies {
+    compile project(":model"),
+        "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
+}
